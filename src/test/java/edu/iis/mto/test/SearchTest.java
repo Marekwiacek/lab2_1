@@ -118,5 +118,22 @@ public class SearchTest {
 		assertThat(result.getPosition(), is(position));
 
 	}
+	
+	//Dlugosc sekwencji >1; elementu nie ma w pomieszanej sekwencji
+		@SuppressWarnings("static-access")
+		@Test
+		public void Test7(){
+			int[] params7 = {5,1,4,6,2};
+			BinarySearch search = new BinarySearch();
+			boolean isValid = false;
+			int position = -1;
+			
+			SearchResult result = search.search(3, params7);
+			//assertEquals(-1, result.getPosition());
+			
+			assertThat(result.isFound(), is(isValid));
+			assertThat(result.getPosition(), is(position));
+
+		}
 
 }
